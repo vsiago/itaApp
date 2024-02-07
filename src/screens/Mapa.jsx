@@ -69,7 +69,7 @@ export default function App() {
             />
           </MapView>
           <TouchableOpacity style={styles.buttonOpenDrawer}>
-            <Text>Open Drawer</Text>
+            <Text>Container Perfil e OpenDrawer</Text>
           </TouchableOpacity>
         </>
       )}
