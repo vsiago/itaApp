@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Feather } from "@expo/vector-icons";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import Mapa from "../screens/Mapa";
 import Dashboard from "../screens/Dashboard";
@@ -16,16 +16,15 @@ export default function TabRoutes() {
         tabBarActiveTintColor: "darkred", // Cor do ícone quando ativo
         tabBarInactiveTintColor: "lightcoral", // Cor do ícone quando inativo
         tabBarLabelStyle: {
-          fontSize: 12,
-          marginBottom: 5,
+          display: "none", // Oculta o texto do label
         },
         tabBarStyle: {
           backgroundColor: "white", // Cor do fundo da barra de navegação inferior
           borderTopWidth: 1,
           borderTopColor: "lightgray",
         },
-        tabBarActiveBackgroundColor: "darkred", // Cor de fundo quando ativo
-        tabBarInactiveBackgroundColor: "lightcoral", // Cor de fundo quando inativo
+        tabBarActiveBackgroundColor: "#002D55", // Cor de fundo quando ativo
+        tabBarInactiveBackgroundColor: "#003768", // Cor de fundo quando inativo
       }}
     >
       <Tab.Screen
@@ -33,21 +32,14 @@ export default function TabRoutes() {
         component={Mapa}
         options={{
           tabBarIcon: ({ size, focused }) => (
-            <View
-              style={{
-                alignItems: "center",
-                justifyContent: "center",
-                width: "100%",
-              }}
-            >
+            <View style={styles.tabBarIconContainer}>
               <Feather
                 name={focused ? "home" : "home"}
-                color={focused ? "red" : "black"}
+                color={focused ? "#fff" : "#AFC7DC"}
                 size={size}
               />
             </View>
           ),
-          tabBarLabel: "Início",
         }}
       />
       <Tab.Screen
@@ -55,23 +47,26 @@ export default function TabRoutes() {
         component={Dashboard}
         options={{
           tabBarIcon: ({ size, focused }) => (
-            <View
-              style={{
-                alignItems: "center",
-                justifyContent: "center",
-                width: "100%",
-              }}
-            >
+            <View style={styles.tabBarIconContainer}>
               <Feather
                 name={focused ? "menu" : "menu"}
-                color={focused ? "red" : "black"}
+                color={focused ? "#fff" : "#AFC7DC"}
                 size={size}
               />
             </View>
           ),
-          tabBarLabel: "Serviços",
         }}
       />
     </Tab.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  tabBarIconContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: 50, // Defina a altura desejada
+  },
+});
