@@ -22,6 +22,7 @@ export default function SingIn() {
 
   }
 
+
   // Navegar para o Register
   const navigation = useNavigation();
 

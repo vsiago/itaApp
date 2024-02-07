@@ -1,13 +1,12 @@
 import { NavigationContainer } from '@react-navigation/native';
 import DrawerRoutes from './drawer.routes';
 
-import Login from '../screens/Login'
-import Register from '../screens/Login'
+import StackRoutes from '../routes/stack.routes'
 
 export default function Routes() {
     return (
         <NavigationContainer>
-            <Login />
+            <StackRoutes />
         </NavigationContainer>
     )
 }

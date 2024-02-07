@@ -2,8 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from '../screens/Login'
 import Register from '../screens/Register'
-import Mapa from '../screens/Mapa'
-import TabRoutes from './tab.routes';
+import DrawerRoutes from './drawer.routes';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,8 +18,8 @@ export default function StackRoutes() {
                 component={Register}
             />
             <Stack.Screen 
-                name="mapa"
-                component={Mapa}
+                name="drawer"
+                component={DrawerRoutes}
             />
         </Stack.Navigator>
     )

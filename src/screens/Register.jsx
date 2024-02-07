@@ -5,8 +5,18 @@ import {
     TextInput,
     TouchableOpacity,
   } from "react-native";
+
+  import { useNavigation } from "@react-navigation/native";
   
   export default function Register() {
+
+      // Navegar para o Register
+  const navigation = useNavigation();
+
+  function handlePressRegister() {
+    navigation.navigate("drawer");
+  }
+
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Registra-se</Text>
@@ -31,7 +41,7 @@ import {
           placeholderTextColor="#B1C0D7"
         />
         <TouchableOpacity style={styles.buttonEntrar}>
-          <Text style={styles.buttonEntrarText}>Registrar e entrar</Text>
+          <Text onPress={() => handlePressRegister()} style={styles.buttonEntrarText}>Registrar e entrar</Text>
         </TouchableOpacity>
       </View>
     );
