@@ -71,6 +71,7 @@ export default function App() {
           <TouchableOpacity style={styles.buttonOpenDrawer}>
             <Text>Container Perfil e OpenDrawer</Text>
           </TouchableOpacity>
+          <View style={styles.headerMap}>{/* Seu conteúdo aqui */}</View>
         </>
       )}
       <StatusBar style="auto" />
