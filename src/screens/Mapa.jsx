@@ -4,6 +4,8 @@ import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
 import { requestForegroundPermissionsAsync, getCurrentPositionAsync, watchPositionAsync, LocationAccuracy } from 'expo-location';
 import { styles } from '../../styles';
+import customMapStyle from '../../assets/mapStyles/customMapStyleLight.json';
+
 
 export default function App() {
   const [location, setLocation] = useState(null)
@@ -50,7 +52,8 @@ export default function App() {
             longitude: location.coords.longitude,
             latitudeDelta: 0.005,
             longitudeDelta: 0.005
-          }}>
+          }}
+          customMapStyle={customMapStyle}>
             <Marker coordinate={{
               latitude: location.coords.latitude,
               longitude: location.coords.longitude,
@@ -62,4 +65,3 @@ export default function App() {
     </View>
   );
 }
-
