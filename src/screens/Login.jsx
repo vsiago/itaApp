@@ -8,10 +8,9 @@ import {
   Image,
 } from "react-native";
 
-import { useNavigation  } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function SingIn() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,9 +18,7 @@ export default function SingIn() {
     if (email === "" || password === "") {
       return;
     }
-
   }
-
 
   // Navegar para o Register
   const navigation = useNavigation();
@@ -56,7 +53,7 @@ export default function SingIn() {
       />
 
       <TouchableOpacity style={styles.buttonEntrar} onPress={handleLogin}>
-          <Text style={styles.buttonEntrarText}>Entrar</Text>
+        <Text style={styles.buttonEntrarText}>Entrar</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={handlePress} style={styles.buttonRegister}>
         <Text style={styles.buttonRegisterText}>Registrar</Text>
@@ -71,7 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    backgroundColor: "#2D384F",
+    backgroundColor: "#1A3966",
   },
   logo: {
     width: 240,
@@ -88,7 +85,7 @@ const styles = StyleSheet.create({
     width: "90%",
     marginBottom: 10,
     paddingHorizontal: 14,
-    backgroundColor: "#1E283C",
+    backgroundColor: "#00284D",
     fontSize: 18,
     color: "#fff",
     borderRadius: 6,
