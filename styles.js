@@ -10,5 +10,14 @@ export const styles = StyleSheet.create({
   map: {
     flex: 1,
     width: '100%'
+  },
+  buttonOpenDrawer: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    backgroundColor: 'white',
+    padding: 10,
+    borderRadius: 5,
+    zIndex: 999,
   }
 });
