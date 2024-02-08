@@ -5,7 +5,7 @@ import { View, StyleSheet } from "react-native";
 
 import Mapa from "../screens/Mapa";
 import Dashboard from "../screens/Dashboard";
-import FooterApp from "../components/footerApps"; // Importe seu componente FooterApp aqui
+import FooterApp from "../components/FooterApps";
 
 const Tab = createBottomTabNavigator();
 

@@ -10,7 +10,7 @@ import {
 } from "expo-location";
 import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
-import FooterApps from "../components/footerApps";
+import FooterApps from "../components/FooterApps";
 
 export default function App() {
   const [location, setLocation] = useState(null);
