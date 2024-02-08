@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import MapView, { Marker } from "react-native-maps";
 import { StatusBar } from "expo-status-bar";
-import { View, TouchableOpacity, Text } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import {
   requestForegroundPermissionsAsync,
   getCurrentPositionAsync,
@@ -12,6 +12,28 @@ import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
 import FooterApps from "../components/footerApps";
 import HeaderProfile from "../components/headerProfile";
+
+const CustomMarker = ({ title }) => {
+  return (
+    <View style={markerStyles.container}>
+      <Text style={markerStyles.title}>{title}</Text>
+    </View>
+  );
+};
+
+const markerStyles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+    padding: 10,
+    borderRadius: 5,
+    borderColor: "black",
+    borderWidth: 1,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+});
 
 export default function App() {
   const [location, setLocation] = useState(null);
@@ -68,7 +90,9 @@ export default function App() {
                 latitude: location.coords.latitude,
                 longitude: location.coords.longitude,
               }}
-            />
+            >
+              <CustomMarker title="Custom Marker" />
+            </Marker>
           </MapView>
           <FooterApps />
           <HeaderProfile />
