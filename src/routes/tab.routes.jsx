@@ -20,8 +20,7 @@ export default function TabRoutes() {
         },
         tabBarStyle: {
           backgroundColor: "white", // Cor do fundo da barra de navegação inferior
-          borderTopWidth: 1,
-          borderTopColor: "lightgray",
+          // Remove a linha fina do topo
         },
         tabBarActiveBackgroundColor: "#002D55", // Cor de fundo quando ativo
         tabBarInactiveBackgroundColor: "#003768", // Cor de fundo quando inativo
@@ -67,6 +66,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    height: 50, // Defina a altura desejada
+    height: 50,
+    borderTopWidth: 1,
+    borderTopColor: '#003768'
   },
 });

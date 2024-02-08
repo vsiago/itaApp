@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import MapView, { Marker } from "react-native-maps";
 import { StatusBar } from "expo-status-bar";
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import {
   requestForegroundPermissionsAsync,
   getCurrentPositionAsync,
@@ -10,6 +10,7 @@ import {
 } from "expo-location";
 import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
+import FooterApps from "../components/footerApps";
 
 export default function App() {
   const [location, setLocation] = useState(null);
@@ -71,7 +72,7 @@ export default function App() {
           <TouchableOpacity style={styles.buttonOpenDrawer}>
             <Text>Container Perfil e OpenDrawer</Text>
           </TouchableOpacity>
-          <View style={styles.headerMap}>{/* Seu conteúdo aqui */}</View>
+          <FooterApps />
         </>
       )}
       <StatusBar style="auto" />
