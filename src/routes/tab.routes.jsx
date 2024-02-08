@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Feather } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
@@ -10,6 +10,8 @@ import FooterApp from "../components/footerApps"; // Importe seu componente Foot
 const Tab = createBottomTabNavigator();
 
 export default function TabRoutes() {
+  const [showFooter, setShowFooter] = useState(true);
+
   return (
     <View style={{ flex: 1 }}>
       <Tab.Navigator
@@ -40,7 +42,11 @@ export default function TabRoutes() {
                 />
               </View>
             ),
-            tabBarVisible: route.name !== 'dashboard', // Oculta o tabBar quando a rota for 'dashboard'
+          })}
+          listeners={({ navigation, route }) => ({
+            tabPress: (e) => {
+              setShowFooter(true);
+            },
           })}
         />
         <Tab.Screen
@@ -56,11 +62,15 @@ export default function TabRoutes() {
                 />
               </View>
             ),
-            tabBarVisible: route.name !== 'mapa', // Oculta o tabBar quando a rota for 'mapa'
+          })}
+          listeners={({ navigation, route }) => ({
+            tabPress: (e) => {
+              setShowFooter(false);
+            },
           })}
         />
       </Tab.Navigator>
-      {<FooterApp />}
+      {showFooter && <FooterApp />}
     </View>
   );
 }
