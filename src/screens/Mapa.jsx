@@ -11,6 +11,7 @@ import {
 import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
 import FooterApps from "../components/footerApps";
+import HeaderProfile from "../components/headerProfile";
 
 export default function App() {
   const [location, setLocation] = useState(null);
@@ -69,10 +70,8 @@ export default function App() {
               }}
             />
           </MapView>
-          <TouchableOpacity style={styles.buttonOpenDrawer}>
-            <Text>Container Perfil e OpenDrawer</Text>
-          </TouchableOpacity>
           <FooterApps />
+          <HeaderProfile />
         </>
       )}
       <StatusBar style="auto" />
