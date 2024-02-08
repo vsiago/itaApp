@@ -72,7 +72,7 @@ export default function App() {
           <TouchableOpacity style={styles.buttonOpenDrawer}>
             <Text>Container Perfil e OpenDrawer</Text>
           </TouchableOpacity>
-          <FooterApps />
+          {/* <FooterApps /> */}
         </>
       )}
       <StatusBar style="auto" />

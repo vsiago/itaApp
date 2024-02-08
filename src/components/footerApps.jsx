@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     flexDirection: 'row',
     gap: 10,
-    bottom: 0,
+    bottom: 49,
     zIndex: 2000,
     borderBottomWidth: 1,
     borderBottomColor: '#003768',
