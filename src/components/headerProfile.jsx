@@ -1,5 +1,6 @@
-import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Text, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+
 
 export default function HeaderProfile() {
   return (
@@ -11,14 +12,18 @@ export default function HeaderProfile() {
       />
       <View style={styles.containerProfile} >
           <View style={styles.containerProfileTexts}>
-            <Text style={styles.textName}>Iago Souza</Text>
+            <Text style={styles.textName}>Olá Thiago</Text>
             <Text style={styles.textClima}>Tempo limpo, 23º</Text>
           </View>
-          <View style={styles.photoAvatar}>
+          <TouchableOpacity style={styles.photoAvatar}>
             <View style={styles.avatar}>
-
+              <Image 
+                source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem
+                style={styles.avatar}
+                resizeMode="contain"
+              />
             </View>
-          </View>
+          </TouchableOpacity>
       </View>
     </View>
   );
@@ -55,8 +60,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textName: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#fff',
+    marginTop: -5
   },
   textClima: {
     fontSize: 15,
