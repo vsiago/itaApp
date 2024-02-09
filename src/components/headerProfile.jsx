@@ -1,8 +1,15 @@
+import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; // Importe useNavigation
 import { LinearGradient } from 'expo-linear-gradient';
 
-
 export default function HeaderProfile() {
+  const navigation = useNavigation(); // Obtenha o objeto de navegação
+
+  const handleOpenDrawer = () => {
+    navigation.openDrawer(); // Abra o Drawer
+  };
+
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -10,12 +17,12 @@ export default function HeaderProfile() {
         colors={['rgba(0,55,104,1)', 'transparent']}
         style={styles.background}
       />
-      <View style={styles.containerProfile} >
+      <View style={styles.containerProfile}>
         <View style={styles.containerProfileTexts}>
           <Text style={styles.textName}>Olá Thiago</Text>
           <Text style={styles.textClima}>Tempo limpo, 23º</Text>
         </View>
-        <TouchableOpacity style={styles.photoAvatar}>
+        <TouchableOpacity style={styles.photoAvatar} onPress={handleOpenDrawer}>
           <View style={styles.avatar}>
             <Image
               source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import MapView, { Marker } from "react-native-maps";
 import { StatusBar } from "expo-status-bar";
-import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import {
   requestForegroundPermissionsAsync,
   getCurrentPositionAsync,
@@ -15,7 +15,7 @@ import HeaderProfile from "../components/headerProfile";
 
 const CustomMarker = ({ title }) => {
   return (
-    <TouchableOpacity style={styles.photoAvatar}>
+    <View style={styles.photoAvatar}>
       <View style={styles.avatar}>
         <Image
           source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem
@@ -23,7 +23,7 @@ const CustomMarker = ({ title }) => {
           resizeMode="contain"
         />
       </View>
-    </TouchableOpacity>
+    </View>
   );
 };
 
