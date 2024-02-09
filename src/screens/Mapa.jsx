@@ -10,12 +10,8 @@ import {
 } from "expo-location";
 import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
-<<<<<<< HEAD
 import FooterApps from "../components/FooterApps";
-=======
-import FooterApps from "../components/footerApps";
 import HeaderProfile from "../components/headerProfile";
->>>>>>> fb82736a45fc5915e719e7996bf378240db81860
 
 export default function App() {
   const [location, setLocation] = useState(null);
@@ -74,15 +70,8 @@ export default function App() {
               }}
             />
           </MapView>
-<<<<<<< HEAD
-          <TouchableOpacity style={styles.buttonOpenDrawer}>
-            <Text>Container Perfil e OpenDrawer</Text>
-          </TouchableOpacity>
-          {/* <FooterApps /> */}
-=======
           <FooterApps />
           <HeaderProfile />
->>>>>>> fb82736a45fc5915e719e7996bf378240db81860
         </>
       )}
       <StatusBar style="auto" />

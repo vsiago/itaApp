@@ -5,18 +5,10 @@ import { View, StyleSheet, TouchableOpacity } from "react-native";
 
 import Mapa from "../screens/Mapa";
 import Dashboard from "../screens/Dashboard";
-<<<<<<< HEAD
 import Line from "../components/line";
 import { useNavigation } from "@react-navigation/native";
 import Places from "../screens/Places";
-=======
-<<<<<<< HEAD
-import FooterApp from "../components/FooterApps";
-=======
-import FooterApp from "../components/line"; // Importe seu componente FooterApp aqui
->>>>>>> 4e404a19a9be4e25aa18374d5d3a93a189ac0e72
 
->>>>>>> fb82736a45fc5915e719e7996bf378240db81860
 
 const Tab = createBottomTabNavigator();
 
