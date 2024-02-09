@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import MapView, { Marker } from "react-native-maps";
 import { StatusBar } from "expo-status-bar";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import {
   requestForegroundPermissionsAsync,
   getCurrentPositionAsync,
@@ -10,28 +10,35 @@ import {
 } from "expo-location";
 import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
-import FooterApps from "../components/footerApps";
+import FooterApps from "../components/FooterApps";
 import HeaderProfile from "../components/headerProfile";
 
 const CustomMarker = ({ title }) => {
   return (
-    <View style={markerStyles.container}>
-      <Text style={markerStyles.title}>{title}</Text>
+    <View style={styles.photoAvatar}>
+      <View style={styles.avatar}>
+        <Image
+          source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem
+          style={styles.avatar}
+          resizeMode="contain"
+        />
+      </View>
     </View>
   );
 };
 
 const markerStyles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
-    padding: 10,
-    borderRadius: 5,
-    borderColor: "black",
-    borderWidth: 1,
+    backgroundColor: "transparent",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  title: {
-    fontSize: 16,
-    fontWeight: "bold",
+  avatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: "white",
   },
 });
 
@@ -91,7 +98,7 @@ export default function App() {
                 longitude: location.coords.longitude,
               }}
             >
-              <CustomMarker title="Custom Marker" />
+              <CustomMarker />
             </Marker>
           </MapView>
           <FooterApps />

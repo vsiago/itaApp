@@ -22,7 +22,7 @@ export default function FooterApps() {
         style={styles.buttonContainer}
       >
         <TouchableOpacity style={styles.touchBotton}>
-          <Text>Onibus Gratis</Text>
+          <Text>Coleta de Lixo</Text>
         </TouchableOpacity>
       </LinearGradient>
     </View>
@@ -33,37 +33,33 @@ const styles = StyleSheet.create({
   container: {
     position: 'absolute',
     width: '100%',
-    height: '25%',
-    paddingHorizontal: 25,
-    paddingVertical: 20,
-    justifyContent: 'center',
+    height: '15%',
+    justifyContent: 'space-between',
     alignItems: 'flex-end',
     flexDirection: 'row',
-    gap: 10,
     bottom: 0,
     zIndex: 2000,
-    borderBottomWidth: 1,
-    borderBottomColor: '#003768',
+    paddingHorizontal: 20,
+    paddingBottom: 15
   },
   background: {
     position: 'absolute',
     left: 0,
     right: 0,
-    height: 400,
-    height: '120%',
+    height: '140%',
   },
   buttonContainer: {
-    padding: 15,
-    alignItems: 'center',
-    borderRadius: 5,
-    width: '45%',
-    height: 100,
+    borderRadius: 100,
+    width: '40%',
+    height: 60,
     zIndex: 1000,
-    elevation: 20
+    elevation: 20,
+    marginLeft: 5
   },
   touchBotton: {
     height: '100%',
-    width: '100%'
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 15,
