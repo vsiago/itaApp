@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Feed() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Screen Dashboard</Text>
+      <Text style={styles.text}>Noticias e servicos</Text>
     </View>
   );
 }

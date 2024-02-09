@@ -11,19 +11,19 @@ export default function HeaderProfile() {
         style={styles.background}
       />
       <View style={styles.containerProfile} >
-          <View style={styles.containerProfileTexts}>
-            <Text style={styles.textName}>Olá Thiago</Text>
-            <Text style={styles.textClima}>Tempo limpo, 23º</Text>
+        <View style={styles.containerProfileTexts}>
+          <Text style={styles.textName}>Olá Thiago</Text>
+          <Text style={styles.textClima}>Tempo limpo, 23º</Text>
+        </View>
+        <TouchableOpacity style={styles.photoAvatar}>
+          <View style={styles.avatar}>
+            <Image
+              source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem
+              style={styles.avatar}
+              resizeMode="contain"
+            />
           </View>
-          <TouchableOpacity style={styles.photoAvatar}>
-            <View style={styles.avatar}>
-              <Image 
-                source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem
-                style={styles.avatar}
-                resizeMode="contain"
-              />
-            </View>
-          </TouchableOpacity>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 10
   },
-  containerProfileTexts: {  
+  containerProfileTexts: {
     alignItems: 'flex-end',
     justifyContent: 'center',
   },

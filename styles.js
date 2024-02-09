@@ -20,4 +20,18 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     zIndex: 999,
   },
+  photoAvatar: {
+    width: 32,
+    height: 32,
+    backgroundColor: '#2887DF',
+    borderRadius: 100,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  avatar: {
+    width: 25,
+    height: 25,
+    backgroundColor: '#fff',
+    borderRadius: 100
+  }
 });

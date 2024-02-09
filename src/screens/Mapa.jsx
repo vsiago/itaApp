@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import MapView, { Marker } from "react-native-maps";
 import { StatusBar } from "expo-status-bar";
-import { View, TouchableOpacity, Text } from "react-native";
+import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import {
   requestForegroundPermissionsAsync,
   getCurrentPositionAsync,
@@ -12,6 +12,35 @@ import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
 import FooterApps from "../components/FooterApps";
 import HeaderProfile from "../components/headerProfile";
+
+const CustomMarker = ({ title }) => {
+  return (
+    <TouchableOpacity style={styles.photoAvatar}>
+      <View style={styles.avatar}>
+        <Image
+          source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem
+          style={styles.avatar}
+          resizeMode="contain"
+        />
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+const markerStyles = StyleSheet.create({
+  container: {
+    backgroundColor: "transparent",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  avatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: "white",
+  },
+});
 
 export default function App() {
   const [location, setLocation] = useState(null);
@@ -68,7 +97,9 @@ export default function App() {
                 latitude: location.coords.latitude,
                 longitude: location.coords.longitude,
               }}
-            />
+            >
+              <CustomMarker />
+            </Marker>
           </MapView>
           <FooterApps />
           <HeaderProfile />

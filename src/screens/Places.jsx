@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Places() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Places Screen</Text>
+      <Text style={styles.text}>Lugares de Itaguai</Text>
     </View>
   );
 }

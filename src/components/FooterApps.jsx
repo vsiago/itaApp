@@ -37,11 +37,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     flexDirection: 'row',
-    gap: 10,
     bottom: 0,
     zIndex: 2000,
-    borderBottomWidth: 1,
-    borderBottomColor: '#003768',
+    paddingHorizontal: 20,
+    paddingBottom: 15
   },
   background: {
     position: 'absolute',
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     borderRadius: 100,
-    width: '43%',
+    width: '40%',
     height: 60,
     zIndex: 1000,
     elevation: 20,
