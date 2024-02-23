@@ -9,17 +9,17 @@ const Stack = createNativeStackNavigator();
 export default function StackRoutes() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen 
+            <Stack.Screen
+                name="drawer"
+                component={DrawerRoutes}
+            />
+            <Stack.Screen
                 name="login"
                 component={Login}
             />
-            <Stack.Screen 
+            <Stack.Screen
                 name="register"
                 component={Register}
-            />
-            <Stack.Screen 
-                name="drawer"
-                component={DrawerRoutes}
             />
         </Stack.Navigator>
     )

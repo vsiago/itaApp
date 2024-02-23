@@ -1,10 +1,11 @@
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 import HeaderProfile from "../components/headerProfile";
 import Swiper from 'react-native-swiper'
 
 export default function Feed() {
   return (
-    <View className="flex-1 items-center  bg-[#D0DAE5]">
+    // <ScrollView>
+    <View className="flex-1 items-start  bg-[#D0DAE5]">
       <HeaderProfile />
       <View className="bg-[#003768] p-0 w-full min-h-[380px] rounded-br-[50px] rounded-bl-[50px]">
       </View>
@@ -43,11 +44,11 @@ export default function Feed() {
         </Swiper>
       </View>
 
-      <View className="flex-1 items-center justify-start">
+      <View className="flex-1 w-full items-start justify-start px-5">
 
         {/* ------------------- Menu Servicos ------------------- */}
 
-        <View className="absolute -top-8 flex-row gap-2 justify-center items-center pr-1">
+        <View className="absolute -top-8 flex-row gap-2 justify-center items-center pr-1 left-0 right-0 z-50">
           <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
             <Text className="text-xs font-medium text-slate-600">
               2 Via de Boleto
@@ -64,13 +65,37 @@ export default function Feed() {
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
+        {/* ------------------- Feed Noticias ------------------- */}
 
-      {/* ------------------- Menu Servicos ------------------- */}
+        <View className="flex-1 justify-start items-start w-full mt-24">
+          <Text className="uppercase font-medium tracking-wide text-slate-600 mb-5">Noticias</Text>
+          <TouchableOpacity style={{ elevation: 1 }} className="w-full bg-slate-200 rounded-bl-md rounded-md mb-4">
+            <View className="bg-slate-400 h-[140px] w-full items-center justify-center rounded-t-md">
+              <Text>Imagem</Text>
+            </View>
+            <View className="">
+              <Text className="text-lg font-bold text-slate-600 mx-3 my-3 mb-1">Novo Hospital  Sao Francisco Xavier</Text>
+            </View>
+            <View className="px-3 pb-3">
+              <Text className="text-base font-normal text-slate-500">Aqui vai uma descricao de um materia da Prefeitura para o publico clicar e consumir.</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={{ elevation: 1 }} className="w-full bg-slate-200 rounded-bl-md rounded-md mb-4">
+            <View className="bg-slate-400 h-[140px] w-full items-center justify-center rounded-t-md">
+              <Text>Imagem</Text>
+            </View>
+            <View className="">
+              <Text className="text-lg font-bold text-slate-600 mx-3 my-3 mb-1">Novo Hospital  Sao Francisco Xavier</Text>
+            </View>
+            <View className="px-3 pb-3">
+              <Text className="text-base font-normal text-slate-500">Aqui vai uma descricao de um materia da Prefeitura para o publico clicar e consumir.</Text>
+            </View>
+          </TouchableOpacity>
 
-      <View className="flex-1 justify-start items-start bg-red-100">
-        <Text className="uppercase bg-red-500">Noticias</Text>
+        </View>
+
       </View>
     </View>
+    // </ScrollView>
   );
 }

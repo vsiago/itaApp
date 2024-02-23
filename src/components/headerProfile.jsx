@@ -13,8 +13,8 @@ export default function HeaderProfile() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        // Background Linear Gradient
-        colors={['rgba(0,55,104,1)', 'transparent']}
+        // Background Linear Gradient rgba(0,55,104,1)
+        colors={['red', 'transparent']}
         style={styles.background}
       />
       <View style={styles.containerProfile}>
