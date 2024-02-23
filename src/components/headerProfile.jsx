@@ -13,8 +13,8 @@ export default function HeaderProfile() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        // Background Linear Gradient rgba(0,55,104,1)
-        colors={['red', 'transparent']}
+        // Background Linear Gradient 
+        colors={['rgba(0,55,104,1)', 'transparent']}
         style={styles.background}
       />
       <View style={styles.containerProfile}>
@@ -40,14 +40,14 @@ const styles = StyleSheet.create({
   container: {
     position: 'absolute',
     width: '100%',
-    height: '25%',
+    height: 200,
     alignItems: 'flex-end',
     justifyContent: 'center',
     gap: 10,
     top: -13,
     left: 0,
     zIndex: 2000,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   background: {
     position: 'absolute',
