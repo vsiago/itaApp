@@ -4,7 +4,7 @@ import { Feather } from "@expo/vector-icons";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 
 import Mapa from "../screens/Mapa";
-import Dashboard from "../screens/Dashboard";
+import Dashboard from "../screens/Prefeitura";
 import Line from "../components/line";
 import { useNavigation } from "@react-navigation/native";
 import Places from "../screens/Places";

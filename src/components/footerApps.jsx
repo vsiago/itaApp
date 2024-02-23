@@ -13,7 +13,7 @@ export default function FooterApps() {
         colors={['#fff', '#fff']}
         style={styles.buttonContainer}
       >
-        <TouchableOpacity style={styles.touchBotton}>
+        <TouchableOpacity className="bg-sky-500 rounded-full" style={styles.touchBotton}>
           <Text style={styles.text}>Onibus Gratis</Text>
         </TouchableOpacity>
       </LinearGradient>

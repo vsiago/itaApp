@@ -19,7 +19,7 @@ export default function HeaderProfile() {
       />
       <View style={styles.containerProfile}>
         <View style={styles.containerProfileTexts}>
-          <Text style={styles.textName}>Olá Thiago</Text>
+          <Text style={styles.textName}>Olá Tiago,</Text>
           <Text style={styles.textClima}>Tempo limpo, 23º</Text>
         </View>
         <TouchableOpacity style={styles.photoAvatar} onPress={handleOpenDrawer}>

@@ -10,15 +10,15 @@ import {
 } from "expo-location";
 import { styles } from "../../styles";
 import customMapStyle from "../../assets/mapStyles/customMapStyleLight.json";
-import FooterApps from "../components/FooterApps";
 import HeaderProfile from "../components/headerProfile";
+import FooterApps from "../components/footerApps";
 
 const CustomMarker = ({ title }) => {
   return (
     <View style={styles.photoAvatar}>
       <View style={styles.avatar}>
         <Image
-          source={require("../../assets/thiago-perfil.png")} // Substitua pelo caminho da sua imagem
+          source={require("../../assets/thiago-perfil.png")}
           style={styles.avatar}
           resizeMode="contain"
         />
