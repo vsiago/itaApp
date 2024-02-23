@@ -51,17 +51,17 @@ export default function Feed() {
           <View className="absolute -top-8 flex-row gap-2 justify-center items-center pr-1 left-0 right-0 z-50">
             <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
               <Text className="text-xs font-medium text-slate-600">
-                2 Via de Boleto
+                A Prefeitura
               </Text>
             </TouchableOpacity>
             <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
               <Text className="text-xs font-medium text-slate-600">
-                Prefeitura
+                IPTU
               </Text>
             </TouchableOpacity>
             <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
               <Text className="text-xs font-medium text-slate-600">
-                Prefeitura
+                Carta de Servicos
               </Text>
             </TouchableOpacity>
           </View>
