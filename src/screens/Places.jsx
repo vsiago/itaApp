@@ -8,7 +8,6 @@ export default function Places() {
       <View className="bg-[#005B8E] p-10 w-full min-h-[240px] rounded-br-[100px] rounded-bl-[100px]">
       </View>
       <View>
-        <Text className="text-black bg-red-500">Text</Text>
       </View>
     </View >
   );

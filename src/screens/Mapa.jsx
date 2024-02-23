@@ -105,7 +105,7 @@ export default function App() {
           <HeaderProfile />
         </>
       )}
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </View>
   );
 }
