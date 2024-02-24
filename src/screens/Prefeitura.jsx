@@ -7,6 +7,9 @@ export default function Feed() {
     <ScrollView className="">
       <View className="flex-1 items-start  bg-[#D0DAE5]">
         <HeaderProfile />
+        <View className=" w-[110] pb-1 absolute top-[66] ml-5 left-0 z-[2002] border-b-2 border-sky-500 rounded-br-2xl rounded blur-sm pl-2">
+          <Text className="text-white font-semibold text-xl">Prefeitura</Text>
+        </View>
         <View className="bg-[#003768] p-0 w-full min-h-[380px] rounded-br-[50px] rounded-bl-[50px]">
         </View>
 
