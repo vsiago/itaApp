@@ -19,8 +19,8 @@ export default function HeaderProfile() {
       />
       <View style={styles.containerProfile}>
         <View style={styles.containerProfileTexts}>
-          <Text style={styles.textName}>Olá Tiago,</Text>
-          <Text style={styles.textClima}>Tempo limpo, 23º</Text>
+          <Text className="text-white font-medium text-lg">Olá Tiago,</Text>
+          <Text className="text-sm text-sky-200 -mt-1">Tempo limpo, 23º</Text>
         </View>
         <TouchableOpacity style={styles.photoAvatar} onPress={handleOpenDrawer}>
           <View style={styles.avatar}>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   container: {
     position: 'absolute',
     width: '100%',
-    height: 200,
+    height: 220,
     alignItems: 'flex-end',
     justifyContent: 'center',
     gap: 10,
@@ -76,16 +76,16 @@ const styles = StyleSheet.create({
     color: '#DCEBF3',
   },
   photoAvatar: {
-    width: 50,
-    height: 50,
+    width: 45,
+    height: 45,
     backgroundColor: '#2887DF',
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center'
   },
   avatar: {
-    width: 42,
-    height: 42,
+    width: 40,
+    height: 40,
     backgroundColor: '#fff',
     borderRadius: 100
   }

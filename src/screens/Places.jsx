@@ -1,17 +1,25 @@
 import { Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 import HeaderProfile from "../components/headerProfile";
 import Swiper from 'react-native-swiper'
+import { LinearGradient } from "expo-linear-gradient";
+import HeaderPage from "../components/headerPage";
 
 export default function Feed() {
   return (
     <ScrollView>
       <View className="flex-1 items-start  bg-[#D0DAE5]">
         <HeaderProfile />
-        <View className=" w-[90] pb-1 absolute top-[66] ml-5 left-0 z-[2002] border-b-2 border-sky-500 rounded-br-2xl rounded blur-sm pl-2">
-          <Text className="text-white font-semibold text-xl">Lugares</Text>
-        </View>
-        <View className="bg-[#003768] p-0 w-full min-h-[380px] rounded-br-[50px] rounded-bl-[50px]">
-        </View>
+        <HeaderPage NomePage="Lugares" iconName="images" />
+        <LinearGradient
+          className="min-h-[380px] w-full rounded-br-[50px] rounded-bl-[50px] bg-red-500"
+
+          start={{ x: 0, y: 2 }}
+          end={{ x: 1.5, y: 2 }}
+          colors={["#125B85", "#29A0E0", "#31E5C5"]}
+        /><>
+        </>
+        {/* <View className="bg-[#003768] p-0 w-full min-h-[380px] rounded-br-[50px] rounded-bl-[50px]">
+        </View> */}
 
         {/*------------------- Carrossel ------------------- */}
 
@@ -59,7 +67,7 @@ export default function Feed() {
             </TouchableOpacity>
             <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
               <Text className="text-xs font-medium text-slate-600">
-                IPTU
+                Escolas
               </Text>
             </TouchableOpacity>
             <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
