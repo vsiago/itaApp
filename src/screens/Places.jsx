@@ -13,13 +13,13 @@ export default function Feed() {
         <HeaderPage NomePage="Lugares" iconName="images" />
         <BlurView intensity={50} className="min-h-[80px] w-full">
           <LinearGradient
-            className="min-h-[380px] w-full rounded-br-[50px] rounded-bl-[50px] bg-red-500 opacity-75"
+            className="min-h-[380px] w-full rounded-br-[50px] rounded-bl-[50px] bg-red-500"
             style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
             blurType="light"
             blurAmount={10}
-            start={{ x: 0, y: 2 }}
-            end={{ x: 1.5, y: 2 }}
-            colors={["#12855C", "#29A0E0", "#31E5C5"]}
+            // start={{ x: 0, y: 2 }}
+            // end={{ x: 1.5, y: 2 }}
+            colors={["#003768", "#", "#003768"]}
           /><>
           </>
         </BlurView>
@@ -29,11 +29,11 @@ export default function Feed() {
 
         {/*------------------- Carrossel ------------------- */}
 
-        <View className="absolute mt-[122px] z-[2000]  h-[190px] mx-5 left-0 right-0 transform -translate-x-1/2 -translate-y-1/2">
+        <View className="absolute mt-[126px] z-[2000]  h-[200px] mx-5 left-0 right-0 transform -translate-x-1/2 -translate-y-1/2">
           <Swiper
             autoplay={true}
             loop={true}
-            paginationStyle={{ bottom: -20 }}
+            paginationStyle={{ bottom: 3 }}
             dotColor="#c2c2c2"
             activeDotColor="#31A7E5"
           >
@@ -65,26 +65,60 @@ export default function Feed() {
 
           {/* ------------------- Menu Lugares ------------------- */}
 
-          <View className="absolute -top-8 flex-row gap-2 justify-center items-center pr-1 left-0 right-0 z-50">
-            <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
-              <Text className="text-xs font-medium text-slate-600 break-words text-center">
-                Unidades de{'\n'}Saude
-              </Text>
+          <View className="absolute -top-8 flex-row gap-2 justify-center items-center pr-1 left-0 right-0 z-50 ">
+            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
+              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
+                <Text className="text-lg font-medium text-white break-words text-center">
+                  Ico
+                </Text>
+              </View>
+              <View className="my-3">
+                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
+                  Todos
+                </Text>
+              </View>
             </TouchableOpacity>
-            <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
-              <Text className="text-xs font-medium text-slate-600">
-                Escolas
-              </Text>
+            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
+              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
+                <Text className="text-lg font-medium text-white break-words text-center">
+                  Ico
+                </Text>
+              </View>
+              <View className="my-3">
+                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
+                  Prefeitura
+                </Text>
+              </View>
             </TouchableOpacity>
-            <TouchableOpacity className="bg-white h-24 w-28 rounded-lg items-center justify-center">
-              <Text className="text-xs font-medium text-slate-600 text-center">
-                Carta de{'\n'}Servicos
-              </Text>
+            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
+              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
+                <Text className="text-lg font-medium text-white break-words text-center">
+                  Ico
+                </Text>
+              </View>
+              <View className="my-3">
+                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
+                  Praia
+                </Text>
+              </View>
             </TouchableOpacity>
+            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
+              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
+                <Text className="text-lg font-medium text-white break-words text-center">
+                  Ico
+                </Text>
+              </View>
+              <View className="my-3">
+                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
+                  Serras
+                </Text>
+              </View>
+            </TouchableOpacity>
+
           </View>
           {/* ------------------- Feed Noticias ------------------- */}
 
-          <View className="flex-1 justify-start items-start w-full mt-24 mb-10">
+          <View className="flex-1 justify-start items-start w-full mt-28 mb-10">
             <Text className="uppercase font-medium tracking-wide text-slate-600 mb-5">Noticias</Text>
             <TouchableOpacity style={{ elevation: 1 }} className="w-full bg-slate-100 rounded-bl-md rounded-md mb-4">
               <View className="bg-slate-400 h-[160] w-full items-center justify-center rounded-t-md">

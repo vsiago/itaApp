@@ -36,7 +36,7 @@ export default function TabRoutes() {
             backgroundColor: "",
             height: 100, // Adjust the height as needed (in pixels)
           },
-          tabBarActiveBackgroundColor: "#2887DF",
+          tabBarActiveBackgroundColor: "rgb(14 165 233)",
           tabBarInactiveBackgroundColor: "#003768",
         }}
       >
@@ -111,7 +111,7 @@ export default function TabRoutes() {
       </Tab.Navigator>
       {showFooter && ''}
       <TouchableOpacity style={styles.buttonMaps} onPress={() => openTabMap("mapa")}>
-        <View style={{ width: 47, height: 47, backgroundColor: '#2887DF', borderRadius: 100, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ width: 47, height: 47, backgroundColor: 'rgb(14 165 233)', borderRadius: 100, alignItems: 'center', justifyContent: 'center' }}>
           <Feather name="map" size={24} color="#fff" />
         </View>
       </TouchableOpacity>
@@ -140,6 +140,7 @@ const styles = StyleSheet.create({
     marginLeft: -25,
     borderRadius: 100,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    elevation: 3,
   }
 });
