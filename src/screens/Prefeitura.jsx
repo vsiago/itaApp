@@ -15,7 +15,7 @@ export default function Feed() {
 
           start={{ x: 0, y: 2 }}
           end={{ x: 1.5, y: 2 }}
-          colors={["#125B85", "#29A0E0", "#31E5C5"]}
+          colors={["#2887DF", "rgba(0,55,104,1)", "#2887DF"]}
         /><>
         </>
         {/* <View className="bg-[#003768] p-0 w-full min-h-[380px] rounded-br-[50px] rounded-bl-[50px]">

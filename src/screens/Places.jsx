@@ -3,6 +3,7 @@ import HeaderProfile from "../components/headerProfile";
 import Swiper from 'react-native-swiper'
 import { LinearGradient } from "expo-linear-gradient";
 import HeaderPage from "../components/headerPage";
+import { BlurView } from "expo-blur";
 
 export default function Feed() {
   return (
@@ -10,14 +11,19 @@ export default function Feed() {
       <View className="flex-1 items-start  bg-[#D0DAE5]">
         <HeaderProfile />
         <HeaderPage NomePage="Lugares" iconName="images" />
-        <LinearGradient
-          className="min-h-[380px] w-full rounded-br-[50px] rounded-bl-[50px] bg-red-500"
+        <BlurView intensity={50} className="min-h-[80px] w-full">
+          <LinearGradient
+            className="min-h-[380px] w-full rounded-br-[50px] rounded-bl-[50px] bg-red-500 opacity-75"
+            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
+            blurType="light"
+            blurAmount={10}
+            start={{ x: 0, y: 2 }}
+            end={{ x: 1.5, y: 2 }}
+            colors={["#12855C", "#29A0E0", "#31E5C5"]}
+          /><>
+          </>
+        </BlurView>
 
-          start={{ x: 0, y: 2 }}
-          end={{ x: 1.5, y: 2 }}
-          colors={["#125B85", "#29A0E0", "#31E5C5"]}
-        /><>
-        </>
         {/* <View className="bg-[#003768] p-0 w-full min-h-[380px] rounded-br-[50px] rounded-bl-[50px]">
         </View> */}
 
@@ -33,21 +39,21 @@ export default function Feed() {
           >
             <View>
               <Image
-                className="rounded-2xl"
+                className="rounded-lg"
                 source={require("../../assets/hospital-sx.png")}
                 style={{ width: "100%", height: "100%" }}
               />
             </View>
             <View>
               <Image
-                className="rounded-2xl"
+                className="rounded-lg"
                 source={require("../../assets/praca-texeira.png")}
                 style={{ width: "100%", height: "100%" }}
               />
             </View>
             <View>
               <Image
-                className="rounded-2xl"
+                className="rounded-lg"
                 source={require("../../assets/famacia-central.png")}
                 style={{ width: "100%", height: "100%" }}
               />

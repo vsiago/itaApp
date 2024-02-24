@@ -33,19 +33,24 @@ export default function TabRoutes() {
             display: "none",
           },
           tabBarStyle: {
-            backgroundColor: "white",
+            backgroundColor: "",
+            height: 100, // Adjust the height as needed (in pixels)
           },
-          tabBarActiveBackgroundColor: "#002D55",
+          tabBarActiveBackgroundColor: "#2887DF",
           tabBarInactiveBackgroundColor: "#003768",
         }}
       >
-
         <Tab.Screen
           name="mapa"
           component={Mapa}
           options={({ route }) => ({
             tabBarIcon: ({ size, focused }) => null, // Oculta o ícone definindo como null
             tabBarButton: () => null, // Oculta o contêiner da guia
+            tabBarStyle: {
+              backgroundColor: '#c3c3', // Optional background color
+              overflow: 'hidden', // Ensures rounded corners are displayed correctly
+              height: 57, // Adjust the height as needed (in pixels)
+            },
           })}
           listeners={({ navigation, route }) => ({
             tabPress: (e) => {
@@ -66,6 +71,11 @@ export default function TabRoutes() {
                 />
               </View>
             ),
+            tabBarStyle: {
+              backgroundColor: '#c3c3', // Optional background color
+              overflow: 'hidden', // Ensures rounded corners are displayed correctly
+              height: 57, // Adjust the height as needed (in pixels)
+            },
           })}
           listeners={({ navigation, route }) => ({
             tabPress: (e) => {
@@ -86,6 +96,11 @@ export default function TabRoutes() {
                 />
               </View>
             ),
+            tabBarStyle: {
+              backgroundColor: '#c3c3', // Optional background color
+              overflow: 'hidden', // Ensures rounded corners are displayed correctly
+              height: 57, // Adjust the height as needed (in pixels)
+            },
           })}
           listeners={({ navigation, route }) => ({
             tabPress: (e) => {
@@ -94,13 +109,13 @@ export default function TabRoutes() {
           })}
         />
       </Tab.Navigator>
-      {showFooter && <Line />}
+      {showFooter && ''}
       <TouchableOpacity style={styles.buttonMaps} onPress={() => openTabMap("mapa")}>
         <View style={{ width: 47, height: 47, backgroundColor: '#2887DF', borderRadius: 100, alignItems: 'center', justifyContent: 'center' }}>
           <Feather name="map" size={24} color="#fff" />
         </View>
       </TouchableOpacity>
-    </View>
+    </View >
   );
 }
 

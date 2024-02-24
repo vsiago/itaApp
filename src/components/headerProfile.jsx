@@ -20,7 +20,7 @@ export default function HeaderProfile() {
       <View style={styles.containerProfile}>
         <View style={styles.containerProfileTexts}>
           <Text className="text-white font-medium text-lg">Olá Tiago,</Text>
-          <Text className="text-sm text-sky-200 -mt-1">Tempo limpo, 23º</Text>
+          <Text className="text-sm text-sky-200 -mt-1 mb-2">Tempo limpo, 23º</Text>
         </View>
         <TouchableOpacity style={styles.photoAvatar} onPress={handleOpenDrawer}>
           <View style={styles.avatar}>
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   avatar: {
-    width: 40,
-    height: 40,
+    width: 39,
+    height: 39,
     backgroundColor: '#fff',
     borderRadius: 100
   }
