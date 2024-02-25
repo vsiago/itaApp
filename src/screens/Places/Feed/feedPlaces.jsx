@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button, ActivityIndicator } from 'react-native';
+import { View, Button, ActivityIndicator, Text } from 'react-native';
 import FeedPlaceItem from './FeedPlaceItem/feedPlaceItem';
+import PlacesMenu from './PlacesMenu/placesMenu';
 import axios from 'axios';
 
 const FeedPlaces = () => {
@@ -29,28 +30,35 @@ const FeedPlaces = () => {
   };
 
   return (
-    <View style={{ flex: 1, width: '100%' }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-around' }} className="my-5">
-        <Button title="Praias" onPress={() => handleSearch('beach')} />
-        <Button title="Escolas" onPress={() => handleSearch('school')} />
-        <Button title="Unidades de Saúde" onPress={() => handleSearch('health')} />
-      </View>
-      {loading ? ( // Mostra um indicador de carregamento enquanto os dados estão sendo buscados
-        <ActivityIndicator size="large" color="#0000ff" style={{ marginTop: 20 }} />
-      ) : (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} className="">
-          {feedData.map((item) => (
-            <FeedPlaceItem
-              key={item.id} // Use a chave única para re-renderizar corretamente os itens do feed
-              imageURL={item.urls.regular}
-              title={item.alt_description}
-              description="Aqui vai uma descricao de um material da Prefeitura para o público clicar e consumir."
-              likes={Math.floor(Math.random() * 1000)}
-            />
-          ))}
+    <View className="flex-1 justify-start items-start w-full px-5 ">
+      <PlacesMenu />
+
+      <Text className="uppercase font-medium tracking-wide text-slate-600 mt-28">PRINCIPAIS LUGARES</Text>
+
+      <View style={{ flex: 1, width: '100%' }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }} className="my-5">
+          <Button title="Praias" onPress={() => handleSearch('beach')} />
+          <Button title="Escolas" onPress={() => handleSearch('school')} />
+          <Button title="Unidades de Saúde" onPress={() => handleSearch('health')} />
         </View>
-      )}
+        {loading ? ( // Mostra um indicador de carregamento enquanto os dados estão sendo buscados
+          <ActivityIndicator size="large" color="#0000ff" style={{ marginTop: 20 }} />
+        ) : (
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} className="">
+            {feedData.map((item) => (
+              <FeedPlaceItem
+                key={item.id} // Use a chave única para re-renderizar corretamente os itens do feed
+                imageURL={item.urls.regular}
+                title={item.alt_description}
+                description="Aqui vai uma descricao de um material da Prefeitura para o público clicar e consumir."
+                likes={Math.floor(Math.random() * 1000)}
+              />
+            ))}
+          </View>
+        )}
+      </View>
     </View>
+
   );
 };
 
