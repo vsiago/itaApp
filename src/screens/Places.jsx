@@ -19,7 +19,7 @@ export default function Feed() {
             blurAmount={10}
             // start={{ x: 0, y: 2 }}
             // end={{ x: 1.5, y: 2 }}
-            colors={["#003768", "#", "#003768"]}
+            colors={["#003768", "#003768"]}
           /><>
           </>
         </BlurView>

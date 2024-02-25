@@ -109,9 +109,9 @@ export default function TabRoutes() {
           })}
         />
       </Tab.Navigator>
-      {showFooter && ''}
+      {showFooter && <Line />}
       <TouchableOpacity style={styles.buttonMaps} onPress={() => openTabMap("mapa")}>
-        <View style={{ width: 47, height: 47, backgroundColor: 'rgb(14 165 233)', borderRadius: 100, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ elevation: 15, width: 47, height: 47, backgroundColor: 'rgb(14 165 233)', borderRadius: 100, alignItems: 'center', justifyContent: 'center' }}>
           <Feather name="map" size={24} color="#fff" />
         </View>
       </TouchableOpacity>
