@@ -4,8 +4,10 @@ import Swiper from 'react-native-swiper'
 import { LinearGradient } from "expo-linear-gradient";
 import HeaderPage from "../components/headerPage";
 import { BlurView } from "expo-blur";
+import FeedPlaces from "../components/feedPlaces"
 
 export default function Feed() {
+
   return (
     <ScrollView>
       <View className="flex-1 items-start  bg-[#D0DAE5]">
@@ -116,47 +118,12 @@ export default function Feed() {
             </TouchableOpacity>
 
           </View>
-          {/* ------------------- Feed Noticias ------------------- */}
+
+          {/* ------------------- Feed de Lugares ------------------- */}
 
           <View className="flex-1 justify-start items-start w-full mt-28 mb-10">
-            <Text className="uppercase font-medium tracking-wide text-slate-600 mb-5">Noticias</Text>
-            <TouchableOpacity style={{ elevation: 1 }} className="w-full bg-slate-100 rounded-bl-md rounded-md mb-4">
-              <View className="bg-slate-400 h-[160] w-full items-center justify-center rounded-t-md">
-                <Text className="text-slate-500 text-xl border-2 border-slate-500 p-5 py-4 rounded-xl">Imagem</Text>
-              </View>
-              <View className="">
-                <Text className="text-lg font-bold text-slate-600 mx-3 my-6 mb-1 leading-6">Novo Hospital Sao Francisco Xavier</Text>
-              </View>
-              <View className="px-3 pb-4">
-                <Text className="text-base font-normal text-slate-500">Aqui vai uma descricao de um materia da Prefeitura para o publico clicar e consumir.</Text>
-              </View>
-              <View className="mx-3 mb-3 pt-2 border-t-2 border-slate-200 flex-row">
-                <Text className=" py-1 font-semibold text-slate-600 text-base mr-3">Curtir   |</Text>
-                <Text className=" py-1 font-semibold text-slate-500 text-base">96</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ elevation: 1 }} className="w-full bg-slate-100 rounded-bl-md rounded-md mb-4">
-              <View className="bg-slate-400 h-[160] w-full items-center justify-center rounded-t-md">
-                <Text>Imagem</Text>
-              </View>
-              <View className="">
-                <Text className="text-lg font-bold text-slate-600 mx-3 my-3 mb-1 leading-6">Novo projeto de mobilidade urbana é anunciado pela prefeitura</Text>
-              </View>
-              <View className="px-3 pb-3">
-                <Text className="text-base font-normal text-slate-500">Aqui vai uma descricao de um materia da Prefeitura para o publico clicar e consumir.</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ elevation: 1 }} className="w-full bg-slate-100 rounded-bl-md rounded-md mb-4">
-              <View className="bg-slate-400 h-[160] w-full items-center justify-center rounded-t-md">
-                <Text>Imagem</Text>
-              </View>
-              <View className="">
-                <Text className="text-lg font-bold text-slate-600 mx-3 my-3 mb-1 leading-6">Prefeitura investe em iniciativas de sustentabilidade para tornar a cidade mais verde</Text>
-              </View>
-              <View className="px-3 pb-3">
-                <Text className="text-base font-normal text-slate-500">Aqui vai uma descricao de um materia da Prefeitura para o publico clicar e consumir.</Text>
-              </View>
-            </TouchableOpacity>
+            <Text className="uppercase font-medium tracking-wide text-slate-600 mb-5">PRINCIPAIS LUGARES</Text>
+            <FeedPlaces />
           </View>
 
         </View>
