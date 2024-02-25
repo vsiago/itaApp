@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Button, ActivityIndicator } from 'react-native';
-import FeedPlaceItem from './feedPlaceItem';
+import FeedPlaceItem from './FeedPlaceItem/feedPlaceItem';
 import axios from 'axios';
 
 const FeedPlaces = () => {

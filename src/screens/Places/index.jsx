@@ -1,10 +1,10 @@
 import { Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
-import HeaderProfile from "../components/headerProfile";
+import HeaderProfile from "../../components/headerProfile";
 import Swiper from 'react-native-swiper'
 import { LinearGradient } from "expo-linear-gradient";
-import HeaderPage from "../components/headerPage";
-import FeedPlaces from "../components/feedPlaces"
-import PlacesMenu from "../components/placesMenu";
+import HeaderPage from "../../components/headerPage";
+import FeedPlaces from "./Feed/feedPlaces"
+import PlacesMenu from "../../components/placesMenu";
 
 export default function Feed() {
 
@@ -42,21 +42,21 @@ export default function Feed() {
             <View>
               <Image
                 className="rounded-lg"
-                source={require("../../assets/hospital-sx.png")}
+                source={require("../../../assets/hospital-sx.png")}
                 style={{ width: "100%", height: "100%" }}
               />
             </View>
             <View>
               <Image
                 className="rounded-lg"
-                source={require("../../assets/praca-texeira.png")}
+                source={require("../../../assets/praca-texeira.png")}
                 style={{ width: "100%", height: "100%" }}
               />
             </View>
             <View>
               <Image
                 className="rounded-lg"
-                source={require("../../assets/famacia-central.png")}
+                source={require("../../../assets/famacia-central.png")}
                 style={{ width: "100%", height: "100%" }}
               />
             </View>
