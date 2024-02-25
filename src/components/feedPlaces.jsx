@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const FeedPlaces = () => {
   const [feedData, setFeedData] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('pet');
+  const [searchQuery, setSearchQuery] = useState('nature');
   const [loading, setLoading] = useState(true); // Estado de carregamento
 
   useEffect(() => {
@@ -29,16 +29,16 @@ const FeedPlaces = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 20 }}>
-        <Button title="Praias" onPress={() => handleSearch('praia')} />
-        <Button title="Escolas" onPress={() => handleSearch('escola')} />
-        <Button title="Unidades de Saúde" onPress={() => handleSearch('saude')} />
+    <View style={{ flex: 1, width: '100%' }}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-around' }} className="my-5">
+        <Button title="Praias" onPress={() => handleSearch('beach')} />
+        <Button title="Escolas" onPress={() => handleSearch('school')} />
+        <Button title="Unidades de Saúde" onPress={() => handleSearch('health')} />
       </View>
       {loading ? ( // Mostra um indicador de carregamento enquanto os dados estão sendo buscados
         <ActivityIndicator size="large" color="#0000ff" style={{ marginTop: 20 }} />
       ) : (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} className="">
           {feedData.map((item) => (
             <PlaceFeedItem
               key={item.id} // Use a chave única para re-renderizar corretamente os itens do feed

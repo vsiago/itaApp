@@ -2,10 +2,10 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 const PlaceFeedItem = ({ imageURL, title, description, likes }) => {
   return (
-    <TouchableOpacity style={{ elevation: 1 }} className="w-full bg-slate-100 rounded-lg mb-3">
+    <TouchableOpacity className="w-full rounded-lg bg-white mb-4">
       <Image
         source={{ uri: imageURL }}
-        style={{ height: 200, width: '100%', resizeMode: 'cover' }}
+        style={{ height: 300, width: '100%', resizeMode: 'cover' }}
         className="rounded-t-lg"
       />
       <View className="">
