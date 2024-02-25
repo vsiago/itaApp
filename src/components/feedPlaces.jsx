@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Button, ActivityIndicator } from 'react-native';
-import PlaceFeedItem from './placesFeedItem';
+import FeedPlaceItem from './feedPlaceItem';
 import axios from 'axios';
 
 const FeedPlaces = () => {
@@ -40,7 +40,7 @@ const FeedPlaces = () => {
       ) : (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} className="">
           {feedData.map((item) => (
-            <PlaceFeedItem
+            <FeedPlaceItem
               key={item.id} // Use a chave única para re-renderizar corretamente os itens do feed
               imageURL={item.urls.regular}
               title={item.alt_description}

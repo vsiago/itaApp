@@ -3,8 +3,8 @@ import HeaderProfile from "../components/headerProfile";
 import Swiper from 'react-native-swiper'
 import { LinearGradient } from "expo-linear-gradient";
 import HeaderPage from "../components/headerPage";
-import { BlurView } from "expo-blur";
 import FeedPlaces from "../components/feedPlaces"
+import PlacesMenu from "../components/placesMenu";
 
 export default function Feed() {
 
@@ -13,7 +13,7 @@ export default function Feed() {
       <View className="flex-1 items-start  bg-[#D0DAE5]">
         <HeaderProfile />
         <HeaderPage NomePage="Lugares" iconName="images" />
-        <BlurView intensity={50} className="min-h-[80px] w-full">
+        <View intensity={50} className="min-h-[80px] w-full">
           <LinearGradient
             className="min-h-[380px] w-full rounded-br-[50px] rounded-bl-[50px] bg-red-500"
             style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
@@ -24,7 +24,7 @@ export default function Feed() {
             colors={["#003768", "#003768"]}
           /><>
           </>
-        </BlurView>
+        </View>
 
         {/* <View className="bg-[#003768] p-0 w-full min-h-[380px] rounded-br-[50px] rounded-bl-[50px]">
         </View> */}
@@ -67,57 +67,7 @@ export default function Feed() {
 
           {/* ------------------- Menu Lugares ------------------- */}
 
-          <View className="absolute -top-8 flex-row gap-2 justify-center items-center pr-1 left-0 right-0 z-50 ">
-            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
-              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
-                <Text className="text-lg font-medium text-white break-words text-center">
-                  Ico
-                </Text>
-              </View>
-              <View className="my-3">
-                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
-                  Todos
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
-              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
-                <Text className="text-lg font-medium text-white break-words text-center">
-                  Ico
-                </Text>
-              </View>
-              <View className="my-3">
-                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
-                  Prefeitura
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
-              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
-                <Text className="text-lg font-medium text-white break-words text-center">
-                  Ico
-                </Text>
-              </View>
-              <View className="my-3">
-                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
-                  Praia
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity className="bg-white opacity-90 rounded-full items-center justify-center p-1" style={{ elevation: 2 }}>
-              <View style={{ elevation: 20 }} className="bg-sky-500 rounded-full h-[75px] w-[75px] items-center justify-center">
-                <Text className="text-lg font-medium text-white break-words text-center">
-                  Ico
-                </Text>
-              </View>
-              <View className="my-3">
-                <Text className="text-xs font-semibold text-slate-500 break-words text-center">
-                  Serras
-                </Text>
-              </View>
-            </TouchableOpacity>
-
-          </View>
+          <PlacesMenu />
 
           {/* ------------------- Feed de Lugares ------------------- */}
 

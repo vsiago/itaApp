@@ -1,6 +1,6 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
-const PlaceFeedItem = ({ imageURL, title, description, likes }) => {
+const FeedPlaceItem = ({ imageURL, title, description, likes }) => {
   return (
     <TouchableOpacity className="w-full rounded-lg bg-white mb-4">
       <Image
@@ -19,4 +19,4 @@ const PlaceFeedItem = ({ imageURL, title, description, likes }) => {
   );
 };
 
-export default PlaceFeedItem;
+export default FeedPlaceItem;
