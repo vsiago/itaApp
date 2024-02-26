@@ -47,7 +47,7 @@ export default function PlacesMenu() {
           ))}
       </View>
       {selectedPlace && (
-        <ScrollView horizontal showsVerticalScrollIndicator={false} className="h-14 w-screen -ml-6">
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} className="h-14 w-screen -ml-6">
           {selectedPlace.categoria.map((categoria, index) => (
             <View key={index} className="bg-slate-300 p-1 mr-1 mt-3 rounded-full h-8 justify-center">
               <Text className='text-slate-600 mx-3' >{categoria.nome}</Text>
