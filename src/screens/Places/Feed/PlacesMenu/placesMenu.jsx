@@ -16,6 +16,24 @@ export default function PlacesMenu() {
   const handlePlacePress = (place) => {
     setSelectedPlace(place);
     setSelectedCategory(null); // Limpa a categoria selecionada
+    // Definir a cor baseada no tipo de lugar selecionado
+    switch (place.nome) {
+      case 'Todos':
+        setColorButtonDefault('bg-slate-800');
+        break;
+      case 'Prefeitura':
+        setColorButtonDefault('bg-[#003768]');
+        break;
+      case 'Praias':
+        setColorButtonDefault('bg-sky-500');
+        break;
+      case 'Serras':
+        setColorButtonDefault('bg-yellow-500');
+        break;
+      default:
+        setColorButtonDefault('bg-slate-500'); // Cor padrão
+        break;
+    }
   };
 
   const handleCategoryPress = (category) => {
@@ -35,7 +53,7 @@ export default function PlacesMenu() {
               >
                 <View
                   style={{ elevation: 20 }}
-                  className={`${selectedPlace === place ? 'bg-sky-500' : colorButtonDefault} rounded-full h-[75px] w-[75px] items-center justify-center`}
+                  className={`${selectedPlace === place ? colorButtonDefault : 'bg-slate-500'} rounded-full h-[75px] w-[75px] items-center justify-center`}
                 >
                   <Text className="text-lg font-medium text-white break-words text-center">
                     {place.icone}
