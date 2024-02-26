@@ -35,7 +35,7 @@ export default function PlacesMenu() {
               >
                 <View
                   style={{ elevation: 20 }}
-                  className={`${colorButtonDefault} rounded-full h-[75px] w-[75px] items-center justify-center`}
+                  className={`${selectedPlace === place ? 'bg-sky-500' : colorButtonDefault} rounded-full h-[75px] w-[75px] items-center justify-center`}
                 >
                   <Text className="text-lg font-medium text-white break-words text-center">
                     {place.icone}
@@ -58,8 +58,8 @@ export default function PlacesMenu() {
               onPress={() => handleCategoryPress(categoria)}
               style={{ marginRight: 10 }}
             >
-              <View className="bg-slate-300 p-1 mr-1 mt-3 rounded-full h-8 justify-center">
-                <Text className='text-slate-600 mx-3' >{categoria.nome}</Text>
+              <View className={`p-1 mt-3 rounded-full h-8 justify-center ${selectedCategory === categoria ? 'bg-slate-500' : 'bg-slate-300'}`}>
+                <Text className={`${selectedCategory === categoria ? 'text-white' : 'text-slate-600'} mx-3`}>{categoria.nome}</Text>
               </View>
             </TouchableOpacity>
           ))}
