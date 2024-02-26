@@ -33,7 +33,7 @@ const FeedPlaces = () => {
     <View className="flex-1 justify-start items-start w-full px-5 ">
       <PlacesMenu />
 
-      <Text className="uppercase font-medium tracking-wide text-slate-600 mt-28">PRINCIPAIS LUGARES</Text>
+      <Text className="uppercase font-medium tracking-wide text-slate-600 mt-36">PRINCIPAIS LUGARES</Text>
 
       <View style={{ flex: 1, width: '100%' }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }} className="my-5">

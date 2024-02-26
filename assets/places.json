@@ -1,6 +1,340 @@
 {
   "lugares": [
     {
+      "nome": "Todos",
+      "icone": "/url",
+      "categoria": [
+        {
+          "nome": "Acontecendo Agora",
+          "descricao": "",
+          "imagem": "/url",
+          "posts": [
+            {
+              "nome": "Hospital São Francisco Xavier",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "263",
+              "comentarios": [
+                {
+                  "usuario": "Ana",
+                  "data": "2024-02-25 10:00:00",
+                  "texto": "Ótimo atendimento!"
+                },
+                {
+                  "usuario": "Carlos",
+                  "data": "2024-02-25 11:30:00",
+                  "texto": "Precisa de mais médicos."
+                },
+                {
+                  "usuario": "Maria",
+                  "data": "2024-02-25 13:45:00",
+                  "texto": "Muito limpo e organizado."
+                }
+              ]
+            },
+            {
+              "nome": "Teatro Municipal",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "98",
+              "comentarios": [
+                {
+                  "usuario": "João",
+                  "data": "2024-02-25 09:15:00",
+                  "texto": "Demora no atendimento."
+                },
+                {
+                  "usuario": "Fernanda",
+                  "data": "2024-02-25 12:20:00",
+                  "texto": "Ótimos profissionais."
+                },
+                {
+                  "usuario": "Pedro",
+                  "data": "2024-02-25 14:00:00",
+                  "texto": "Poderia ter mais estrutura."
+                }
+              ]
+            },
+            {
+              "nome": "Evento da Mulher",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "77",
+              "comentarios": [
+                {
+                  "usuario": "Mariana",
+                  "data": "2024-02-25 11:00:00",
+                  "texto": "Espera muito longa."
+                },
+                {
+                  "usuario": "Roberto",
+                  "data": "2024-02-25 13:10:00",
+                  "texto": "Bom atendimento emergencial."
+                },
+                {
+                  "usuario": "Laura",
+                  "data": "2024-02-25 15:30:00",
+                  "texto": "Falta de medicamentos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Evento da Mulher",
+          "descricao": "",
+          "imagem": "/url",
+          "posts": [
+            {
+              "nome": "Escola Municipal Primavera",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "120",
+              "comentarios": [
+                {
+                  "usuario": "Lucas",
+                  "data": "2024-02-25 09:30:00",
+                  "texto": "Excelente escola!"
+                },
+                {
+                  "usuario": "Juliana",
+                  "data": "2024-02-25 10:45:00",
+                  "texto": "Professores dedicados."
+                },
+                {
+                  "usuario": "Camila",
+                  "data": "2024-02-25 14:20:00",
+                  "texto": "Boas instalações."
+                }
+              ]
+            },
+            {
+              "nome": "Escola Municipal Arco-Íris",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "85",
+              "comentarios": [
+                {
+                  "usuario": "Rafael",
+                  "data": "2024-02-25 11:00:00",
+                  "texto": "Falta de material escolar."
+                },
+                {
+                  "usuario": "Patrícia",
+                  "data": "2024-02-25 13:15:00",
+                  "texto": "Ambiente acolhedor."
+                },
+                {
+                  "usuario": "Anderson",
+                  "data": "2024-02-25 15:40:00",
+                  "texto": "Boa merenda escolar."
+                }
+              ]
+            },
+            {
+              "nome": "Escola Municipal Sol Nascente",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "63",
+              "comentarios": [
+                {
+                  "usuario": "Larissa",
+                  "data": "2024-02-25 10:30:00",
+                  "texto": "Falta de segurança na entrada."
+                },
+                {
+                  "usuario": "Diego",
+                  "data": "2024-02-25 12:50:00",
+                  "texto": "Ótimo suporte aos alunos."
+                },
+                {
+                  "usuario": "Fernanda",
+                  "data": "2024-02-25 14:45:00",
+                  "texto": "Professores atenciosos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Cultura",
+          "descricao": "",
+          "imagem": "/url",
+          "posts": [
+            {
+              "nome": "Casa de Cultura Aurora",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "205",
+              "comentarios": [
+                {
+                  "usuario": "Gustavo",
+                  "data": "2024-02-25 09:45:00",
+                  "texto": "Ótimas exposições."
+                },
+                {
+                  "usuario": "Aline",
+                  "data": "2024-02-25 12:10:00",
+                  "texto": "Falta de divulgação dos eventos."
+                },
+                {
+                  "usuario": "Roberto",
+                  "data": "2024-02-25 15:15:00",
+                  "texto": "Ambiente cultural agradável."
+                }
+              ]
+            },
+            {
+              "nome": "Casa de Cultura Harmonia",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "152",
+              "comentarios": [
+                {
+                  "usuario": "Marcela",
+                  "data": "2024-02-25 10:20:00",
+                  "texto": "Programação variada."
+                },
+                {
+                  "usuario": "Ricardo",
+                  "data": "2024-02-25 13:30:00",
+                  "texto": "Espaço pouco acessível."
+                },
+                {
+                  "usuario": "Ana",
+                  "data": "2024-02-25 16:00:00",
+                  "texto": "Ótimo local para exposições."
+                }
+              ]
+            },
+            {
+              "nome": "Casa de Cultura Arte e Dança",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "94",
+              "comentarios": [
+                {
+                  "usuario": "Pedro",
+                  "data": "2024-02-25 11:45:00",
+                  "texto": "Excelentes aulas de dança."
+                },
+                {
+                  "usuario": "Lúcia",
+                  "data": "2024-02-25 14:50:00",
+                  "texto": "Poucas opções de horários."
+                },
+                {
+                  "usuario": "André",
+                  "data": "2024-02-25 16:30:00",
+                  "texto": "Ótima equipe de instrutores."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Praças",
+          "descricao": "",
+          "imagem": "/url",
+          "posts": [
+            {
+              "nome": "Praça da Liberdade",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "180",
+              "comentarios": [
+                {
+                  "usuario": "Amanda",
+                  "data": "2024-02-25 10:15:00",
+                  "texto": "Ótimo lugar para passear."
+                },
+                {
+                  "usuario": "Lucas",
+                  "data": "2024-02-25 12:40:00",
+                  "texto": "Falta de manutenção nos brinquedos."
+                },
+                {
+                  "usuario": "Carolina",
+                  "data": "2024-02-25 15:20:00",
+                  "texto": "Muito movimentada aos finais de semana."
+                }
+              ]
+            },
+            {
+              "nome": "Praça das Flores",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "127",
+              "comentarios": [
+                {
+                  "usuario": "Marcos",
+                  "data": "2024-02-25 11:30:00",
+                  "texto": "Lugar tranquilo e bonito."
+                },
+                {
+                  "usuario": "Tatiane",
+                  "data": "2024-02-25 14:10:00",
+                  "texto": "Falta de iluminação à noite."
+                },
+                {
+                  "usuario": "Gabriel",
+                  "data": "2024-02-25 16:50:00",
+                  "texto": "Boa área para prática de esportes."
+                }
+              ]
+            },
+            {
+              "nome": "Praça do Sol",
+              "descricao": "",
+              "imagem": "/url",
+              "latitude": "40.7128",
+              "longitude": "-74.0060",
+              "likes": "83",
+              "comentarios": [
+                {
+                  "usuario": "Fernanda",
+                  "data": "2024-02-25 09:50:00",
+                  "texto": "Lugar agradável para descansar."
+                },
+                {
+                  "usuario": "Pedro",
+                  "data": "2024-02-25 13:00:00",
+                  "texto": "Poucos bancos disponíveis."
+                },
+                {
+                  "usuario": "Jéssica",
+                  "data": "2024-02-25 15:40:00",
+                  "texto": "Bom ambiente para eventos culturais."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "nome": "Prefeitura",
       "icone": "/url",
       "categoria": [
