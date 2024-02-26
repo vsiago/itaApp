@@ -14,9 +14,12 @@ export default function PlacesMenu() {
   }, []);
 
   const handlePlacePress = (place) => {
-    if (selectedPlace !== place) {
-      setSelectedPlace(place);
-    }
+    setSelectedPlace(place);
+    setSelectedCategory(null); // Limpa a categoria selecionada
+  };
+
+  const handleCategoryPress = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
@@ -50,13 +53,37 @@ export default function PlacesMenu() {
       {selectedPlace && (
         <ScrollView horizontal showsHorizontalScrollIndicator={false} className="h-14 w-screen -ml-4 pl-4">
           {selectedPlace.categoria.map((categoria, index) => (
-            <View key={index} className="bg-slate-300 p-1 mr-1 mt-3 rounded-full h-8 justify-center">
-              <Text className='text-slate-600 mx-3' >{categoria.nome}</Text>
-            </View>
+            <TouchableOpacity
+              key={index}
+              onPress={() => handleCategoryPress(categoria)}
+              style={{ marginRight: 10 }}
+            >
+              <View className="bg-slate-300 p-1 mr-1 mt-3 rounded-full h-8 justify-center">
+                <Text className='text-slate-600 mx-3' >{categoria.nome}</Text>
+              </View>
+            </TouchableOpacity>
           ))}
         </ScrollView>
       )}
-      <View><Text>Posts Aqui</Text></View>
+      <ScrollView>
+        {/* Renderizar os posts */}
+        {selectedCategory
+          ? selectedCategory.posts.map((post, index) => (
+            <View key={index}>
+              <Text>{post.nome}</Text>
+              {/* Renderizar outros detalhes do post conforme necessário */}
+            </View>
+          ))
+          : selectedPlace &&
+          selectedPlace.categoria.map((categoria, index) =>
+            categoria.posts.map((post, index) => (
+              <View key={index}>
+                <Text>{post.nome}</Text>
+                {/* Renderizar outros detalhes do post conforme necessário */}
+              </View>
+            ))
+          )}
+      </ScrollView>
     </View>
   );
 }
