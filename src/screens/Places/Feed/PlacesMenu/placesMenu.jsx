@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import placesData from '../../../../../assets/places.json';
+import React, { useState, useEffect } from "react";
+import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
+import placesData from "../../../../../assets/places.json";
 
 export default function PlacesMenu() {
-  const [colorButtonDefault, setColorButtonDefault] = useState('bg-slate-500');
+  const [colorButtonDefault, setColorButtonDefault] = useState("bg-slate-500");
   const [places, setPlaces] = useState(null);
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
     setPlaces(placesData.lugares);
-    setColorButtonDefault('bg-slate-500');
+    setColorButtonDefault("bg-slate-500");
   }, []);
 
   const handlePlacePress = (place) => {
@@ -18,20 +18,20 @@ export default function PlacesMenu() {
     setSelectedCategory(null); // Limpa a categoria selecionada
     // Definir a cor baseada no tipo de lugar selecionado
     switch (place.nome) {
-      case 'Todos':
-        setColorButtonDefault('bg-slate-800');
+      case "Todos":
+        setColorButtonDefault("bg-slate-800");
         break;
-      case 'Prefeitura':
-        setColorButtonDefault('bg-[#003768]');
+      case "Prefeitura":
+        setColorButtonDefault("bg-[#3F8AC1]");
         break;
-      case 'Praias':
-        setColorButtonDefault('bg-sky-500');
+      case "Natureza":
+        setColorButtonDefault("bg-[#59C13F]");
         break;
-      case 'Serras':
-        setColorButtonDefault('bg-yellow-500');
+      case "Hotel":
+        setColorButtonDefault("bg-[#D29B32]");
         break;
       default:
-        setColorButtonDefault('bg-slate-500'); // Cor padrão
+        setColorButtonDefault("bg-slate-500"); // Cor padrão
         break;
     }
   };
@@ -42,7 +42,7 @@ export default function PlacesMenu() {
 
   return (
     <View className="flex-1 w-full items-start justify-start px-5 -top-10">
-      <View className="flex-row gap-2 justify-center items-center pr-1">
+      <View className="flex-row w-full justify-between items-center pr-1">
         {places &&
           places.map((place, key) => (
             <View key={key}>
@@ -53,11 +53,17 @@ export default function PlacesMenu() {
               >
                 <View
                   style={{ elevation: 20 }}
-                  className={`${selectedPlace === place ? colorButtonDefault : 'bg-slate-500'} rounded-full h-[75px] w-[75px] items-center justify-center`}
+                  className={`${
+                    selectedPlace === place
+                      ? colorButtonDefault
+                      : "bg-slate-500"
+                  } rounded-full h-[75px] w-[75px] items-center justify-center`}
                 >
-                  <Text className="text-lg font-medium text-white break-words text-center">
-                    {place.icone}
-                  </Text>
+                  <Image
+                    source={{ uri: place.icone }}
+                    style={{ height: "50%", width: "50%", resizeMode: "cover" }}
+                    className="rounded-t-lg"
+                  />
                 </View>
                 <View className="my-3">
                   <Text className="text-xs font-semibold text-slate-500 break-words text-center">
@@ -69,15 +75,33 @@ export default function PlacesMenu() {
           ))}
       </View>
       {selectedPlace && (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} className="h-14 w-screen -ml-4 pl-4">
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          className="h-14 w-screen -ml-4 pl-4"
+        >
           {selectedPlace.categoria.map((categoria, index) => (
             <TouchableOpacity
               key={index}
               onPress={() => handleCategoryPress(categoria)}
               style={{ marginRight: 10 }}
             >
-              <View className={`p-1 mt-3 rounded-full h-8 justify-center ${selectedCategory === categoria ? 'bg-slate-500' : 'bg-slate-300'}`}>
-                <Text className={`${selectedCategory === categoria ? 'text-white' : 'text-slate-600'} mx-3`}>{categoria.nome}</Text>
+              <View
+                className={`p-1 mt-3 rounded-full h-8 justify-center ${
+                  selectedCategory === categoria
+                    ? "bg-slate-500"
+                    : "bg-slate-300"
+                }`}
+              >
+                <Text
+                  className={`${
+                    selectedCategory === categoria
+                      ? "text-white"
+                      : "text-slate-600"
+                  } mx-3`}
+                >
+                  {categoria.nome}
+                </Text>
               </View>
             </TouchableOpacity>
           ))}
@@ -87,20 +111,20 @@ export default function PlacesMenu() {
         {/* Renderizar os posts */}
         {selectedCategory
           ? selectedCategory.posts.map((post, index) => (
-            <View key={index}>
-              <Text>{post.nome}</Text>
-              {/* Renderizar outros detalhes do post conforme necessário */}
-            </View>
-          ))
-          : selectedPlace &&
-          selectedPlace.categoria.map((categoria, index) =>
-            categoria.posts.map((post, index) => (
               <View key={index}>
                 <Text>{post.nome}</Text>
                 {/* Renderizar outros detalhes do post conforme necessário */}
               </View>
             ))
-          )}
+          : selectedPlace &&
+            selectedPlace.categoria.map((categoria, index) =>
+              categoria.posts.map((post, index) => (
+                <View key={index}>
+                  <Text>{post.nome}</Text>
+                  {/* Renderizar outros detalhes do post conforme necessário */}
+                </View>
+              ))
+            )}
       </ScrollView>
     </View>
   );

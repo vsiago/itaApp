@@ -49,7 +49,7 @@ export default function TabRoutes() {
             tabBarStyle: {
               backgroundColor: '#c3c3', // Optional background color
               overflow: 'hidden', // Ensures rounded corners are displayed correctly
-              height: 57, // Adjust the height as needed (in pixels)
+              height: '7%', // Adjust the height as needed (in pixels)
             },
           })}
           listeners={({ navigation, route }) => ({
@@ -74,7 +74,7 @@ export default function TabRoutes() {
             tabBarStyle: {
               backgroundColor: '#c3c3', // Optional background color
               overflow: 'hidden', // Ensures rounded corners are displayed correctly
-              height: 57, // Adjust the height as needed (in pixels)
+              height: '7%', // Adjust the height as needed (in pixels)
             },
           })}
           listeners={({ navigation, route }) => ({
@@ -99,7 +99,7 @@ export default function TabRoutes() {
             tabBarStyle: {
               backgroundColor: '#c3c3', // Optional background color
               overflow: 'hidden', // Ensures rounded corners are displayed correctly
-              height: 57, // Adjust the height as needed (in pixels)
+              height: '7%', // Adjust the height as needed (in pixels)
             },
           })}
           listeners={({ navigation, route }) => ({
@@ -109,7 +109,7 @@ export default function TabRoutes() {
           })}
         />
       </Tab.Navigator>
-      {showFooter && <Line />}
+      {/* {showFooter && <Line />} */}
       <TouchableOpacity style={styles.buttonMaps} onPress={() => openTabMap("mapa")}>
         <View style={{ elevation: 15, width: 47, height: 47, backgroundColor: 'rgb(14 165 233)', borderRadius: 100, alignItems: 'center', justifyContent: 'center' }}>
           <Feather name="map" size={24} color="#fff" />

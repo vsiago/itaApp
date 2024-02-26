@@ -2,7 +2,7 @@
   "lugares": [
     {
       "nome": "Todos",
-      "icone": "/url",
+      "icone": "https://github.com/vsiago/itaApp/blob/master/assets/icons/icon-all.png?raw=true",
       "categoria": [
         {
           "nome": "Acontecendo Agora",
@@ -336,7 +336,7 @@
     },
     {
       "nome": "Prefeitura",
-      "icone": "/url",
+      "icone": "https://github.com/vsiago/itaApp/blob/master/assets/icons/icon-prefeitura2.png?raw=true",
       "categoria": [
         {
           "nome": "Unidades de Saúde",
@@ -669,8 +669,8 @@
       ]
     },
     {
-      "nome": "Praias",
-      "icone": "/url",
+      "nome": "Natureza",
+      "icone": "https://github.com/vsiago/itaApp/blob/master/assets/icons/icon-nature.png?raw=true",
       "categoria": [
         {
           "nome": "Coroa Grande",
@@ -921,8 +921,8 @@
       ]
     },
     {
-      "nome": "Serras",
-      "icone": "/url",
+      "nome": "Hotel",
+      "icone": "https://github.com/vsiago/itaApp/blob/master/assets/icons/icon-hotel.png?raw=true",
       "categoria": [
         {
           "nome": "Serra do Matoso",
