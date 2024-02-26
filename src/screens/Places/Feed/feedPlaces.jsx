@@ -30,12 +30,12 @@ const FeedPlaces = () => {
   };
 
   return (
-    <View className="flex-1 justify-start items-start w-full px-5 ">
+    <View className="flex-1 justify-start items-start w-full px-5 bg-red-500">
       <PlacesMenu />
 
       <Text className="uppercase font-medium tracking-wide text-slate-600 mt-36">PRINCIPAIS LUGARES</Text>
 
-      <View style={{ flex: 1, width: '100%' }}>
+      <View style={{ flex: 1, width: '100%', display: 'none' }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }} className="my-5">
           <Button title="Praias" onPress={() => handleSearch('beach')} />
           <Button title="Escolas" onPress={() => handleSearch('school')} />
@@ -58,7 +58,6 @@ const FeedPlaces = () => {
         )}
       </View>
     </View>
-
   );
 };
 

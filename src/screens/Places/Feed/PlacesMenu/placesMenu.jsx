@@ -6,6 +6,7 @@ export default function PlacesMenu() {
   const [colorButtonDefault, setColorButtonDefault] = useState('bg-slate-500');
   const [places, setPlaces] = useState(null);
   const [selectedPlace, setSelectedPlace] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
     setPlaces(placesData.lugares);
@@ -19,7 +20,7 @@ export default function PlacesMenu() {
   };
 
   return (
-    <View className="flex-1 w-full items-start justify-start px-5 absolute -top-10 left-5 z-50">
+    <View className="flex-1 w-full items-start justify-start px-5 -top-10">
       <View className="flex-row gap-2 justify-center items-center pr-1">
         {places &&
           places.map((place, key) => (
@@ -47,7 +48,7 @@ export default function PlacesMenu() {
           ))}
       </View>
       {selectedPlace && (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} className="h-14 w-screen -ml-6">
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} className="h-14 w-screen -ml-4 pl-4">
           {selectedPlace.categoria.map((categoria, index) => (
             <View key={index} className="bg-slate-300 p-1 mr-1 mt-3 rounded-full h-8 justify-center">
               <Text className='text-slate-600 mx-3' >{categoria.nome}</Text>
@@ -55,6 +56,7 @@ export default function PlacesMenu() {
           ))}
         </ScrollView>
       )}
+      <View><Text>Posts Aqui</Text></View>
     </View>
   );
 }
